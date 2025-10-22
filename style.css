@@ -1,0 +1,356 @@
+
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Colore di sfondo di base */
+    background-image: url('res/background.svg'); /* Percorso dell'SVG */
+    background-repeat: no-repeat; /* Evita la ripetizione */
+    background-position: bottom left; /* Posiziona l'SVG in basso a sinistra */
+    background-size: 80%; /* Ridimensiona l'SVG */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altezza minima della finestra */
+  }
+  .wrapper {
+    flex: 1; /* Spinge il footer in basso */
+  }
+  
+/* Header */
+header {
+  background: rgba(44, 62, 80, 0.9); /* Sfondo semi-trasparente */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Spazio tra la foto del profilo e il titolo */
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Rende l'immagine circolare */
+  overflow: hidden;
+  border: 2px solid #fff; /* Bordo bianco per risaltare */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adatta l'immagine al contenitore */
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  gap: 15px; /* Spazio tra il logo e il titolo */
+  flex: 1; /* Occupa lo spazio disponibile per centrare */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adatta l'immagine al contenitore */
+}
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  header .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Rende l'immagine circolare */
+    overflow: hidden;
+    border: 2px solid #fff; /* Bordo bianco per risaltare */
+  }
+  
+  header .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine al contenitore */
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  section {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Assicura che il footer sia spinto in basso */
+  }
+  
+/* Sezione servizi */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .service-item {
+    display: flex;
+    flex-direction: column; /* Immagine sopra, testo sotto */
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-item img {
+    width: 100%;
+    max-width: 300px; /* Limita la larghezza dell'immagine */
+    border-radius: 8px;
+  }
+  
+  .service-content {
+    text-align: center;
+  }
+  
+  .service-content h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+  }
+  
+  .service-content p {
+    margin: 0;
+    color: #555;
+  }
+
+/* Sezione contatti */
+.contacts {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contact-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-row i {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .contact-row p {
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .contact-row a, .contact-row span {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-row a:hover {
+    color: #6c757d; /* Grigio chiaro */
+  }
+  
+  /* Social links */
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #2c3e50;
+  }
+  
+  .social-links i {
+    font-size: 1.5rem;
+  }
+  
+  /* Social links */
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007BFF;
+  }
+  
+  .social-links i {
+    font-size: 1.5rem;
+  }
+
+  /*carosuel*/
+  .carousel {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    width: 80%; /* Riduce la larghezza al 80% del contenitore */
+    max-width: 300px; /* Imposta una larghezza massima */
+    height: auto; /* Mantiene le proporzioni */
+    border-radius: 8px; /* Aggiunge bordi arrotondati */
+    margin: 0 auto; /* Centra l'immagine */
+    display: block; /* Assicura che l'immagine sia centrata */
+  }
+  
+  .carousel-item p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background: #0056b3;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
