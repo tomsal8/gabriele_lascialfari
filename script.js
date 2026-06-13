@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
   recalcPositions();
   window.addEventListener('resize', recalcPositions);
 
+  // Ensure positions and carousel update after all resources (images) load
+  window.addEventListener('load', () => {
+    recalcPositions();
+    // trigger resize-based updates (carousel update is bound to resize when present)
+    window.dispatchEvent(new Event('resize'));
+  });
+
   let scrollY = window.scrollY;
   let ticking = false;
   const lerp = (a, b, t) => a + (b - a) * t;
