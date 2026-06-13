@@ -93,4 +93,53 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fallback: make all visible
     reveals.forEach(el => el.classList.add('visible'));
   }
+
+  // Mobile nav toggle and smooth anchor handling
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = Array.from(document.querySelectorAll('header nav a'));
+  if (navToggle && header) {
+    navToggle.addEventListener('click', () => {
+      const open = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close menu when link clicked (mobile)
+    navLinks.forEach(a => a.addEventListener('click', () => {
+      if (header.classList.contains('nav-open')) {
+        header.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    }));
+  }
+
+  // Smooth anchors with header offset
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerHeight - 12);
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // Highlight active section in nav
+  const sections = Array.from(document.querySelectorAll('main section, #hero, #contact'));
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        const id = ent.target.id;
+        if (!id) return;
+        const link = document.querySelector(`header nav a[href="#${id}"]`);
+        if (!link) return;
+        if (ent.isIntersecting) link.classList.add('active');
+        else link.classList.remove('active');
+      });
+    }, { threshold: 0.45 });
+    sections.forEach(s => obs.observe(s));
+  }
 });

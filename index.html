@@ -12,16 +12,26 @@
       <img src="res/profile.png" alt="Foto del Geometra">
     </div>
     <h1>Geometra Gabriele Lascialfari</h1>
+    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <li><a href="#contact">Contatti</a></li>
       </ul>
     </nav>
   </header>
 
+  <section id="hero" class="hero reveal" data-parallax-speed="0.02">
+    <div class="container">
+      <h2>Geom. Gabriele Lascialfari</h2>
+      <p class="hero-sub">Progetti, sopralluoghi e consulenze tecniche con cura e precisione.</p>
+      <p><a class="btn" href="#services">Scopri i servizi</a></p>
+    </div>
+  </section>
+
   <main>
+    <div class="container">
     <section class="about reveal" data-parallax-speed="0.04">
       <h2>Chi Sono</h2>
       <p class="reveal">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
@@ -46,6 +56,19 @@
           </div>
         </div>
         <button class="carousel-btn next" aria-label="Avanti">&gt;</button>
+      </div>
+    </section>
+    </div>
+
+    <section id="contact" class="contacts reveal">
+      <h2>Contatti</h2>
+      <div class="contact-table">
+        <div class="contact-row">
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+        <div class="contact-row">
+          <p>Telefono: <span>+39 012 345 6789</span></p>
+        </div>
       </div>
     </section>
   </main>
