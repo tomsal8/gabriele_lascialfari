@@ -1,62 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatti - Geom. Gabriele Lascialfari</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contatta il Geometra Gabriele Lascialfari per una consulenza, un sopralluogo o informazioni sui servizi tecnici.">
+  <meta name="theme-color" content="#163b31">
+  <title>Contatti | Geometra Gabriele Lascialfari</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="profile-image">
-        <img src="res/profile.png" alt="Foto del Geometra">
-    </div>
-    <h1>Geometra Gabriele Lascialfari</h1>
-    <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-    </nav>
+<body class="contact-page">
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header site-header-solid" data-header>
+    <a class="brand" href="index.html" aria-label="Geometra Gabriele Lascialfari, home"><span class="brand-mark" aria-hidden="true"><span>G</span><span>L</span></span><span class="brand-copy"><strong>Gabriele Lascialfari</strong><small>Geometra</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale"><a href="index.html#studio">Studio</a><a href="servizi.html">Servizi</a><a href="index.html#ambiti">Ambiti</a><a class="nav-cta" href="contatti.html" aria-current="page">Contatti <span aria-hidden="true">↗</span></a></nav>
   </header>
 
-  <main>
-    <section class="contacts">
-      <h2>Contattami</h2>
-      <div class="contact-table">
-        <div class="contact-row">
-          <i class="fas fa-phone-alt"></i>
-          <p>Telefono:</p>
-          <a href="tel:+391234567890">+39 123 456 7890</a>
-        </div>
-        <div class="contact-row">
-          <i class="fas fa-envelope"></i>
-          <p>Email:</p>
-          <a href="mailto:info@studiogeometra.it">info@studiogeometra.it</a>
-        </div>
-        <div class="contact-row">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>Indirizzo:</p>
-          <span>Via Roma, 123, 00100 Roma</span>
-        </div>
+  <main id="main">
+    <section class="contact-hero">
+      <div class="contact-hero-title reveal is-visible">
+        <p class="eyebrow"><span>06</span> Primo confronto</p>
+        <h1>Parliamo del<br>tuo <em>progetto.</em></h1>
       </div>
-  
-      <h3>Seguimi sui social</h3>
-      <div class="social-links">
-        <a href="https://www.instagram.com/geometra_gl?igsh=MWk3eXFrbGVmaXpv&utm_source=qr" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100067215954919&mibextid=wwXIfr&rdid=sWEn5aZX3UTnqUuH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ZJKtKaQhm%2F%3Fmibextid%3DwwXIfr#" target="_blank">
-          <i class="fab fa-facebook"></i> Facebook
-        </a>
+      <div class="contact-intro reveal is-visible">
+        <p>Una ristrutturazione, una pratica da chiarire o un immobile da verificare? Raccontami la situazione: il primo passo è capire bene il punto di partenza.</p>
       </div>
+    </section>
+
+    <section class="contact-options section" aria-label="Recapiti">
+      <a class="contact-option reveal" href="tel:+391234567890"><span>01 / TELEFONO</span><strong>+39 123 456 7890</strong><i aria-hidden="true">↗</i></a>
+      <a class="contact-option reveal" href="mailto:info@studiogeometra.it"><span>02 / EMAIL</span><strong>info@studiogeometra.it</strong><i aria-hidden="true">↗</i></a>
+      <a class="contact-option reveal" href="https://www.instagram.com/geometra_gl/" target="_blank" rel="noopener noreferrer"><span>03 / INSTAGRAM</span><strong>@geometra_gl</strong><i aria-hidden="true">↗</i></a>
+    </section>
+
+    <section class="contact-info section">
+      <div class="contact-info-card reveal"><p class="kicker">Dove lavoro</p><h2>Lo studio</h2><p>Indirizzo dello studio da inserire<br>Città e provincia</p></div>
+      <div class="contact-info-card reveal"><p class="kicker">Disponibilità</p><h2>Su appuntamento</h2><p>Contattami per concordare un incontro, un sopralluogo o una prima consulenza.</p></div>
+      <div class="contact-drawing reveal" aria-hidden="true"><span></span><span></span><span></span><b>GL</b></div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Geometra Gabriele Lascialfari. Tutti i diritti riservati.</p>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true"><span>G</span><span>L</span></span><span class="brand-copy"><strong>Gabriele Lascialfari</strong><small>Geometra</small></span></a>
+    <div class="footer-links"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="https://www.instagram.com/geometra_gl/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+    <p>© <span data-year>2026</span> Gabriele Lascialfari. Tutti i diritti riservati.</p>
   </footer>
 </body>
 </html>

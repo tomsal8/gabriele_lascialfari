@@ -1,82 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geom. Gabriele Lascialfari</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Geometra Gabriele Lascialfari: progettazione, pratiche edilizie e catastali, rilievi, consulenza e direzione lavori.">
+  <meta name="theme-color" content="#163b31">
+  <title>Geometra Gabriele Lascialfari | Progettazione e consulenza tecnica</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="profile-image" data-parallax-speed="0.12">
-      <img src="res/profile.png" alt="Foto del Geometra">
-    </div>
-    <h1>Geometra Gabriele Lascialfari</h1>
-    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Servizi</a></li>
-        <li><a href="#contact">Contatti</a></li>
-      </ul>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Geometra Gabriele Lascialfari, home">
+      <span class="brand-mark" aria-hidden="true"><span>G</span><span>L</span></span>
+      <span class="brand-copy"><strong>Gabriele Lascialfari</strong><small>Geometra</small></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+      <a href="#studio">Studio</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#ambiti">Ambiti</a>
+      <a class="nav-cta" href="#contatti">Contatti <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <section id="hero" class="hero reveal" data-parallax-speed="0.02">
-    <div class="container">
-      <h2>Geom. Gabriele Lascialfari</h2>
-      <p class="hero-sub">Progetti, sopralluoghi e consulenze tecniche con cura e precisione.</p>
-      <p><a class="btn" href="#services">Scopri i servizi</a></p>
-    </div>
-  </section>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy reveal is-visible">
+        <p class="eyebrow"><span>01</span> Geometra · Approccio contemporaneo</p>
+        <h1 id="hero-title">La precisione<br>non è un <em>dettaglio.</em></h1>
+        <p class="hero-lead">Progettazione, pratiche e direzione lavori con un metodo chiaro, concreto e vicino alle persone.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contatti">Parliamo del progetto</a>
+          <a class="text-link" href="#servizi">Esplora i servizi <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
 
-  <main>
-    <div class="container">
-    <section class="about reveal" data-parallax-speed="0.04">
-      <h2>Chi Sono</h2>
-      <p class="reveal">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+      <div class="hero-visual reveal is-visible">
+        <div class="technical-label" aria-hidden="true">GL / 43.77° N</div>
+        <div class="hero-image parallax-media" data-parallax="0.08">
+          <img src="res/project_1.png" alt="Dettaglio di una struttura architettonica contemporanea" width="640" height="427">
+        </div>
+        <div class="hero-note">
+          <span>Metodo</span>
+          <strong>Ascoltare.<br>Misurare.<br>Risolvere.</strong>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#studio"><span aria-hidden="true"></span> Scorri</a>
     </section>
 
-    <section class="carousel reveal" data-parallax-speed="0.02">
-      <h2>Progetti Recenti</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn prev" aria-label="Indietro">&lt;</button>
-        <div class="carousel-track">
-          <div class="carousel-item">
-            <img src="res/project_1.png" alt="Progetto 1" data-parallax-speed="0.05">
-            <p>Progetto 1: Descrizione breve del progetto.</p>
-          </div>
-          <div class="carousel-item">
-            <img src="res/project_2.png" alt="Progetto 2" data-parallax-speed="0.05">
-            <p>Progetto 2: Descrizione breve del progetto.</p>
-          </div>
-          <div class="carousel-item">
-            <img src="res/project_3.png" alt="Progetto 3" data-parallax-speed="0.05">
-            <p>Progetto 3: Descrizione breve del progetto.</p>
-          </div>
+    <section class="studio section" id="studio" aria-labelledby="studio-title">
+      <div class="section-index reveal">02 / PROFILO</div>
+      <div class="studio-grid">
+        <div class="studio-mark reveal">
+          <img src="res/logo.svg" alt="Logo Gabriele Lascialfari Geometra" width="430" height="401">
         </div>
-        <button class="carousel-btn next" aria-label="Avanti">&gt;</button>
+        <div class="studio-copy reveal">
+          <p class="kicker">Competenza tecnica, linguaggio semplice</p>
+          <h2 id="studio-title">Un riferimento giovane per dare ordine e forma al tuo progetto.</h2>
+          <p>Lavoro all’interno di uno studio tecnico e seguo ogni incarico con attenzione, precisione e un confronto diretto. L’obiettivo è rendere comprensibili anche i passaggi più complessi, dalla prima idea alla consegna.</p>
+          <a class="text-link text-link-dark" href="contatti.html">Conosciamoci <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
-    </div>
 
-    <section id="contact" class="contacts reveal">
-      <h2>Contatti</h2>
-      <div class="contact-table">
-        <div class="contact-row">
-          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+    <section class="services section section-dark" id="servizi" aria-labelledby="services-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-index">03 / COMPETENZE</p>
+          <h2 id="services-title">Servizi tecnici,<br><em>senza complicazioni.</em></h2>
         </div>
-        <div class="contact-row">
-          <p>Telefono: <span>+39 012 345 6789</span></p>
+        <p>Un supporto preciso per privati, imprese e professionisti, costruito sulle necessità reali di ogni intervento.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <span class="service-number">01</span>
+          <h3>Progettazione edilizia</h3>
+          <p>Soluzioni funzionali per nuove costruzioni, ristrutturazioni e ridistribuzione degli spazi.</p>
+          <a href="servizi.html#progettazione" aria-label="Approfondisci progettazione edilizia">Approfondisci <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-number">02</span>
+          <h3>Pratiche e catasto</h3>
+          <p>Gestione delle pratiche edilizie, aggiornamenti catastali e verifica della documentazione.</p>
+          <a href="servizi.html#catasto" aria-label="Approfondisci pratiche e catasto">Approfondisci <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-number">03</span>
+          <h3>Direzione lavori</h3>
+          <p>Coordinamento operativo del cantiere, controllo delle lavorazioni, tempi e qualità esecutiva.</p>
+          <a href="servizi.html#direzione" aria-label="Approfondisci direzione lavori">Approfondisci <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-number">04</span>
+          <h3>Rilievi e consulenze</h3>
+          <p>Sopralluoghi, rilievi, perizie e valutazioni per prendere decisioni con dati affidabili.</p>
+          <a href="servizi.html#consulenza" aria-label="Approfondisci rilievi e consulenze">Approfondisci <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Metodo professionale">
+      <div class="manifesto-image parallax-media" data-parallax="0.06">
+        <img src="res/project_2.png" alt="Facciata geometrica di un edificio contemporaneo" width="640" height="427">
+      </div>
+      <div class="manifesto-copy reveal">
+        <p>Ogni spazio ha</p>
+        <strong>una misura,</strong>
+        <p>ogni progetto</p>
+        <strong>una soluzione.</strong>
+      </div>
+    </section>
+
+    <section class="projects section" id="ambiti" aria-labelledby="projects-title">
+      <div class="section-heading section-heading-light reveal">
+        <div>
+          <p class="section-index">04 / AMBITI</p>
+          <h2 id="projects-title">Dall’idea<br>allo spazio.</h2>
+        </div>
+        <p>Tre prospettive dello stesso lavoro: capire il contesto, costruire la soluzione, seguirne la realizzazione.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-large reveal">
+          <div class="project-image parallax-media" data-parallax="0.05">
+            <img src="res/project_3.png" alt="Architettura pubblica contemporanea" width="640" height="427">
+          </div>
+          <div class="project-meta"><span>01</span><h3>Nuove costruzioni</h3><p>Studio e sviluppo</p></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-image parallax-media" data-parallax="0.07">
+            <img src="res/service_3.png" alt="Tavolo di lavoro con elaborati tecnici" width="640" height="427">
+          </div>
+          <div class="project-meta"><span>02</span><h3>Ristrutturazioni</h3><p>Progetto e cantiere</p></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-image parallax-media" data-parallax="0.04">
+            <img src="res/service_4.png" alt="Documentazione e planimetria catastale" width="640" height="427">
+          </div>
+          <div class="project-meta"><span>03</span><h3>Patrimonio immobiliare</h3><p>Verifica e regolarità</p></div>
+        </article>
+      </div>
+      <p class="media-disclaimer reveal">Le immagini sono dimostrative e saranno sostituite con una selezione di lavori reali.</p>
+    </section>
+
+    <section class="process section" aria-labelledby="process-title">
+      <div class="process-intro reveal">
+        <p class="section-index">05 / METODO</p>
+        <h2 id="process-title">Un percorso chiaro,<br>fin dal primo incontro.</h2>
+      </div>
+      <ol class="process-list">
+        <li class="reveal"><span>01</span><div><h3>Ascolto</h3><p>Obiettivi, necessità e vincoli del progetto.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Rilievo</h3><p>Sopralluogo e raccolta dei dati necessari.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Soluzione</h3><p>Strategia tecnica, tempi e passaggi condivisi.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Realizzazione</h3><p>Assistenza continua fino alla conclusione.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="contact-cta" id="contatti" aria-labelledby="contact-title">
+      <div class="contact-lines" aria-hidden="true"></div>
+      <p class="section-index reveal">06 / CONTATTI</p>
+      <div class="contact-cta-grid">
+        <h2 id="contact-title" class="reveal">Hai un progetto<br>da <em>misurare?</em></h2>
+        <div class="contact-copy reveal">
+          <p>Raccontami cosa vuoi realizzare o quale problema devi risolvere. Partiamo da una prima valutazione chiara.</p>
+          <a class="button button-light" href="contatti.html">Contattami <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Geometra Gabriele Lascialfari. Tutti i diritti riservati.</p>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#home">
+      <span class="brand-mark" aria-hidden="true"><span>G</span><span>L</span></span>
+      <span class="brand-copy"><strong>Gabriele Lascialfari</strong><small>Geometra</small></span>
+    </a>
+    <div class="footer-links">
+      <a href="servizi.html">Servizi</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="https://www.instagram.com/geometra_gl/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    </div>
+    <p>© <span data-year>2026</span> Gabriele Lascialfari. Tutti i diritti riservati.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
