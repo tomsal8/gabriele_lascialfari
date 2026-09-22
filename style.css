@@ -692,14 +692,6 @@ h2 em {
 .project-meta h3 { margin: 0; font-family: var(--display); font-size: 22px; text-transform: uppercase; }
 .project-meta p { margin: 0; color: var(--muted); font-size: 12px; }
 
-.media-disclaimer {
-  max-width: 1360px;
-  margin: 36px auto 0;
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 0.05em;
-}
-
 .process {
   display: grid;
   grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
@@ -871,6 +863,7 @@ h2 em {
 .contact-option:hover { padding-right: 18px; padding-left: 18px; color: var(--lime); }
 .contact-option span { font-size: 10px; font-weight: 800; letter-spacing: 0.16em; }
 .contact-option strong { font-family: var(--display); font-size: clamp(24px, 4vw, 58px); letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
+.contact-option-email strong { font-size: clamp(20px, 3.2vw, 48px); text-transform: none; }
 .contact-option i { font-family: var(--display); font-size: 30px; font-style: normal; text-align: right; }
 
 .contact-info {
@@ -910,7 +903,7 @@ h2 em {
 
 .contact-drawing span:nth-child(2) { width: 38%; }
 .contact-drawing span:nth-child(3) { width: 20%; }
-.contact-drawing b { position: relative; z-index: 1; color: var(--forest); font-family: var(--display); font-size: 70px; letter-spacing: -0.1em; }
+.contact-drawing img { position: relative; z-index: 1; width: min(82%, 330px); height: auto; }
 
 .reveal {
   opacity: 0;
