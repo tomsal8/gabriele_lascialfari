@@ -815,12 +815,18 @@ h2 em {
 
 .detail-image {
   position: relative;
-  min-height: 520px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   overflow: hidden;
   background: #d8dbd5;
 }
 
-.detail-image img { filter: saturate(0.55) contrast(1.05); }
+.detail-image img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  object-position: center;
+  filter: saturate(0.55) contrast(1.05);
+}
 .detail-copy > span { display: block; margin-bottom: 70px; font-family: monospace; font-size: 11px; }
 .detail-copy h2 { font-size: clamp(42px, 5vw, 72px); }
 .detail-copy > p:not(.kicker) { margin: 26px 0; color: var(--muted); font-size: 17px; line-height: 1.8; }
@@ -867,6 +873,16 @@ h2 em {
 .contact-option strong { font-family: var(--display); font-size: clamp(24px, 4vw, 58px); letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
 .contact-option-email strong { font-size: clamp(20px, 3.2vw, 48px); text-transform: none; }
 .contact-option i { font-family: var(--display); font-size: 30px; font-style: normal; text-align: right; }
+.contact-option-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+}
+.contact-option-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+.contact-option-icon-whatsapp svg { fill: currentColor; stroke: none; }
 
 .contact-info {
   padding-top: clamp(56px, 6vw, 88px);
@@ -1015,7 +1031,7 @@ h2 em {
     gap: 50px;
   }
   .service-detail-reverse .detail-image { order: 0; }
-  .detail-image { min-height: min(76vw, 540px); }
+  .detail-image { min-height: 0; }
   .detail-copy > span { margin-bottom: 30px; }
 
   .contact-hero { gap: 45px; }
