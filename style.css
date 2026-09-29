@@ -873,6 +873,22 @@ h2 em {
 .contact-option strong { font-family: var(--display); font-size: clamp(24px, 4vw, 58px); letter-spacing: -0.03em; line-height: 1; text-transform: uppercase; }
 .contact-option-email strong { font-size: clamp(20px, 3.2vw, 48px); text-transform: none; }
 .contact-option i { font-family: var(--display); font-size: 30px; font-style: normal; text-align: right; }
+.contact-option-mobile { grid-template-columns: 200px 1fr auto; }
+.contact-option-actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.contact-action {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  border: 1px solid rgba(255,255,255,0.34);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.contact-action:hover,
+.contact-action:focus-visible { color: var(--forest-deep); background: var(--lime); border-color: var(--lime); transform: translateY(-2px); }
 .contact-option-icon {
   width: 34px;
   height: 34px;
@@ -1056,6 +1072,7 @@ h2 em {
   .contact-hero { gap: 45px; }
   .contact-intro { max-width: 590px; }
   .contact-option { grid-template-columns: 1fr 42px; gap: 10px; }
+  .contact-option-mobile { grid-template-columns: 1fr auto; }
   .contact-option span { grid-column: 1 / -1; }
   .contact-option strong { overflow-wrap: anywhere; }
 }
